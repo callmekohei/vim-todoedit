@@ -60,4 +60,4 @@ done and swipe
 
 ## More info
 
-see: doc/todoedit.txt
+see: [doc/todoedit.txt](https://github.com/callmekohei/vim-todoedit/blob/master/doc/todoedit.txt)
