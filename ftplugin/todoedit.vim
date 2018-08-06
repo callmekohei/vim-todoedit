@@ -44,7 +44,7 @@ function! s:keymaps () abort
   " quick q
   nnoremap <silent><buffer><nowait> q :<C-u>call todoedit#comfirmEmptyBuffer()<CR>
 
-  " folding by marks, taskBody and tag
+  " folding by marks or tag
   nnoremap <silent><buffer><localleader>sx :<C-u>call todoedit#sortByFoldMarker( 'Completion'   )<CR>
   nnoremap <silent><buffer><localleader>sp :<C-u>call todoedit#sortByFoldMarker( 'Priority'     )<CR>
   nnoremap <silent><buffer><localleader>s  :<C-u>call todoedit#sortByFoldMarker( 'PreviousSort' )<CR>
