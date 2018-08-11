@@ -19,9 +19,12 @@ CONTENTS                                                     *todoedit-contents*
         3.1. Sort and fold tasks ............... |todoedit-commands-sort-fold|
         3.2. Mark as done ...................... |todoedit-commands-done|
     4. Options ( Save done tasks ) ............. |todoedit-options|
-    5. Good keymaps ............................ |todoedit-good-keymaps|
-        5.1. Fold .............................. |todoedit-good-keymaps-fold|
-        5.2. Expand window ..................... |todoedit-good-keymaps-exWin|
+    5. Auto complition ......................... |todoedit-complition|
+        5.1. requires .......................... |todoedit-complition-requires|
+        5.2. default candidates ................ |todoedit-complition-defCans|
+    6. Good keymaps ............................ |todoedit-good-keymaps|
+        6.1. Fold .............................. |todoedit-good-keymaps-fold|
+        6.2. Expand window ..................... |todoedit-good-keymaps-exWin|
 
 ==============================================================================
 1. Prepare                                                    *todoedit-prepare*
@@ -166,9 +169,31 @@ CONTENTS                                                     *todoedit-contents*
         let g:doneTaskFile = '/PATH/TO/done.txt'
 
 ==============================================================================
-5. Good keymaps                                          *todoedit-good-keymaps*
+5. Auto complition                                         *todoedit-complition*
 
-    5.1 Fold                                        *todoedit-good-keymaps-fold*
+    Pop up candidates words triggerd by +Folder, ++SubFolder and @Contexts.
+
+    5.1 requires:                                 *todoedit-complition-requires*
+
+        deoplete.nvim
+        https://github.com/Shougo/deoplete.nvim
+
+        deoplete-todoedit
+        https://github.com/callmekohei/deoplete-todoedit
+
+    5.2 default candidates:              *todoedit-complition-defaultCandidates*
+
+        set default folder and contexts in vimrc if you like >
+
+        let g:deoplete_todoedit_defaultContext =
+            \ '06-09 09-12 12-15 15-18 18-21 21-24 PROJECT OFFICE'
+
+        let g:deoplete_todoedit_defaultFolder  = 'TMP HURRY SomeDay'
+
+==============================================================================
+6. Good keymaps                                          *todoedit-good-keymaps*
+
+    6.1 Fold                                        *todoedit-good-keymaps-fold*
 
         author: @LeafCage
         see   : http://d.hatena.ne.jp/leafcage/20111223/1324705686 >
@@ -186,7 +211,7 @@ CONTENTS                                                     *todoedit-contents*
             noremap <leader>r zR
             noremap <leader>f zf
 
-<    5.2. Expand window                            *todoedit-good-keymaps-exWin*
+<    6.2. Expand window                            *todoedit-good-keymaps-exWin*
 
       author: @grohiro
       see   : https://qiita.com/grohiro/items/e3dbcc93510bc8c4c812 >
