@@ -4,29 +4,71 @@ vim-todoedit edits todo.txt with vim-partedit. It's useful to manage your tasks 
 
 ## Images
 
+create `todo.txt` file
+
+![alt text](./pic/foo01.png)
+
+write some tasks
+
+![alt text](./pic/foo02.png)
+
 sort and fold by due date
+
 ```
-<Space> d
+<Space> s d
 ```
 
-![alt text](./pic/foo.png)
+![alt text](./pic/foo03.png)
 
-press `<Space> <Space>` on `+- 006 due:2018-08-06 ············` line.
+
+press `<Space> <Space>` on `+- 006 due:2018-09-01 ············` line.
+
+open another buffer
 
 ```
 <Space> <Space>
 ```
 
-open another buffer, sort and fold by @Contexts
+![alt text](./pic/foo04.png)
+
+sort and fold by @Contexts
+
+You can get just tasks what you want.
 
 ```
-<Space> c
+<Space> s c
 ```
 
-You can get just tasks for now.
+![alt text](./pic/foo05.png)
 
-![alt text](./pic/bar.png)
 
+So you make a task done.
+
+
+```
+<Space> x
+```
+
+![alt text](./pic/foo06.png)
+
+
+## Complition
+
+needs :  
+[deoplete.nvim](https://github.com/Shougo/deoplete.nvim)  
+[deoplete-todoedit](https://github.com/callmekohei/deoplete-todoedit)  
+
+![alt text](./pic/completion.png)
+
+## repeated tasks
+
+Before done
+
+![alt text](./pic/beforRec.png)
+
+After done
+
+![alt text](./pic/afterRec.png)
 
 ## Thanks
 
