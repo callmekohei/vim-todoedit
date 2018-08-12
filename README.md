@@ -1,6 +1,6 @@
 # vim-todoedit
 
-vim-todoedit edits todo.txt with vim-partedit. It's useful to manage your tasks by folding with +folder, ++subfolder, due-date and @contexts.
+vim-todoedit makes of you to edit todo.txt files by sorting and folding +fold tag etc. on another buffer.
 
 ## Images
 
