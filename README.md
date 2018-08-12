@@ -4,15 +4,15 @@ vim-todoedit edits todo.txt with vim-partedit. It's useful to manage your tasks 
 
 ## Images
 
-create `todo.txt` file
+1) create `todo.txt` file
 
 ![alt text](./pic/foo01.png)
 
-write some tasks
+2) write some tasks
 
 ![alt text](./pic/foo02.png)
 
-sort and fold by due date
+3) sort and fold by due date
 
 ```
 <Space> s d
@@ -20,10 +20,9 @@ sort and fold by due date
 
 ![alt text](./pic/foo03.png)
 
+4) open another buffer
 
 press `<Space> <Space>` on `+- 006 due:2018-09-01 ············` line.
-
-open another buffer
 
 ```
 <Space> <Space>
@@ -31,7 +30,7 @@ open another buffer
 
 ![alt text](./pic/foo04.png)
 
-sort and fold by @Contexts
+5) sort and fold by @Contexts
 
 You can get just tasks what you want.
 
@@ -41,9 +40,7 @@ You can get just tasks what you want.
 
 ![alt text](./pic/foo05.png)
 
-
-So you make a task done.
-
+6) done a task
 
 ```
 <Space> x
