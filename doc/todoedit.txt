@@ -30,26 +30,26 @@ CONTENTS                                                     *todoedit-contents*
 1. Prepare                                                    *todoedit-prepare*
 
     1.1 Dependencies                             *todoedit-prepare-dependencies*
+>
+        vim-partedit
 
-        `vim-partedit`
-
-        see: https://github.com/thinca/vim-partedit
+<        see: https://github.com/thinca/vim-partedit
 
     1.2 File name                                    *todoedit-prepare-filename*
-
-        `todo.txt`
-
+>
+        todo.txt
+<
     1.3 todoedit's task formats                   *todoedit-prepare-taskformats*
+>
+        buy eggs                 shows task
+        buy eggs +foo            shows folder
+        buy eggs +foo ++bar      shows subfolder
+        buy eggs @06-09          shows contexts
+        buy eggs due:2018-08-15  shows due date
+        buy eggs rec:3d          shows recurrence task
+        x 2018-07-30 buy eggs    shows completed task
 
-        `buy eggs`                 shows task
-        `buy eggs +foo`            shows folder
-        `buy eggs +foo ++bar`      shows subfolder
-        `buy eggs @06-09`          shows contexts
-        `buy eggs due:2018-08-15`  shows due date
-        `buy eggs rec:3d`          shows recurrence task
-        `x 2018-07-30 buy eggs`    shows completed task
-
-        see details: https://github.com/todotxt/todo.txt
+<        see details: https://github.com/todotxt/todo.txt
 
     1.4 recurrence task                             *todoedit-prepare-rec-task*
 
@@ -85,81 +85,81 @@ CONTENTS                                                     *todoedit-contents*
 2. Example                                                    *todoedit-example*
 
     2.1 git clone `vim-partedit`
-
-        `$ git clone --depth https://github.com/thinca/vim-partedit`
-
+>
+        $ git clone --depth https://github.com/thinca/vim-partedit
+<
     2.2 create `done.txt` for saving completed tasks
-
-        `$ touch done.txt`
-
+>
+        $ touch done.txt
+<
     2.3 vimrc
-
-        `set runtimepath+=/PATH/TO/vim-partedit`
-        `let g:maplocalleader = "\<Space>"`
-        `let g:doneTaskFile = '/PATH/TO/done.txt'`
-
+>
+        set runtimepath+=/PATH/TO/vim-partedit
+        let g:maplocalleader = "\<Space>"
+        let g:doneTaskFile = '/PATH/TO/done.txt'
+<
     2.4 create `todo.txt`
-
-        `$ vim todo.txt`
-
-    2.5 write new tasks
-
-        `buy a book      +study   @09-12 due:2018-09-01`
-        `buy a milk      +meal    @18-21 due:2018-09-01`
-        `go to library   +study   @09-12 due:2018-09-01`
-        `study drawing   +study   @12-15 due:2018-09-01`
-        `earn much money +Someday`
-
+>
+        $ vim todo.txt
+>
+<    2.5 write new tasks
+>
+        buy a book      +study   @09-12 due:2018-09-01
+        buy a milk      +meal    @18-21 due:2018-09-01
+        go to library   +study   @09-12 due:2018-09-01
+        study drawing   +study   @12-15 due:2018-09-01
+        earn much money +Someday
+<
     2.6 sort and fold by `due:`
 
         press <Space> d
-
-        `+- 003 due:2018-09-01 ············`
-        `+- 001 ···························`
-
-    2.7 edit `due:` on another buffer
+>
+        +- 003 due:2018-09-01 ············
+        +- 001 ···························
+>
+<    2.7 edit `due:` on another buffer
 
         move cursor on `due:` folding line
         press <Space> <Space>
-
-        `+- 003 due:2018-09-01 ············`
-
+>
+        +- 003 due:2018-09-01 ············
+<
     2.8 sort and fold by `@Contexts`
 
         press <Space> c
-
-        `+- 002 @09-12 ····················`
-        `study drawing   +study   @12-15 due:2018-09-01`
-        `buy a milk      +meal    @18-21 due:2018-09-01`
-
-    2.9 mark as done
+>
+        +- 002 @09-12 ····················
+        study drawing   +study   @12-15 due:2018-09-01
+        buy a milk      +meal    @18-21 due:2018-09-01
+>
+<    2.9 mark as done
 
         move cursor on `buy a milk` task line
         press <Space> x
-
-        `x 2018-08-04 buy a milk +meal @18-21 due:2018-09-01`
-
+>
+        x 2018-08-04 buy a milk +meal @18-21 due:2018-09-01
+>
 ==============================================================================
 3. Commands                                                  *todoedit-commands*
 
     3.1 Sort and fold tasks:                       *todoedit-commands-sort-fold*
-
-        `<localleader>s`     Sort and fold the file
-        `<localleader>sf`    Sort and fold the file on +Folder
-        `<localleader>ss`    Sort and fold the file on ++SubFolder
-        `<localleader>sc`    Sort and fold the file on @Contexts
-        `<localleader>sd`    Sort and fold the file on due:yyyy-mm-dd date
-        `<localleader>sx`    Sort and fold the file on x completed tasks
-
-    3.2 Mark as done:                                   *todoedit-commands-done*
-
-        `<localleader>x`     Mark current task as done or undone ( toggle )
-        `<localleader>X`     Swipe tasks
-
-    3.3 Part Edit tasks:                            *todoedit-commands-partedit*
-
-        `<localleader><localleader>`     Edit tasks on another buffer
-
+>
+        <localleader>s     Sort and fold the file
+        <localleader>sf    Sort and fold the file on +Folder
+        <localleader>ss    Sort and fold the file on ++SubFolder
+        <localleader>sc    Sort and fold the file on @Contexts
+        <localleader>sd    Sort and fold the file on due:yyyy-mm-dd date
+        <localleader>sx    Sort and fold the file on x completed tasks
+>
+<    3.2 Mark as done:                                   *todoedit-commands-done*
+>
+        <localleader>x     Mark current task as done or undone ( toggle )
+        <localleader>X     Swipe tasks
+>
+<    3.3 Part Edit tasks:                            *todoedit-commands-partedit*
+>
+        <localleader><localleader>     Edit tasks on another buffer
+<
 ==============================================================================
 4. Options ( Save done tasks )                                *todoedit-options*
 
